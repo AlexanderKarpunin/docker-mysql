@@ -17,6 +17,7 @@ RUN echo "WHEEL_USERS ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 
 RUN apt-get install -y MySQL-server
+RUN mkfifo /var/lib/mysql/mysql.sock
 RUN chown -R mysql /var/lib/mysql
 
 EXPOSE 3306
