@@ -16,6 +16,8 @@ RUN echo "alto:12345" | chpasswd
 RUN echo "WHEEL_USERS ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 
+RUN apt-get install -y MySQL-server
+RUN chown -R mysql /var/lib/mysql
 
 EXPOSE 3306
 
